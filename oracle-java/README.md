@@ -7,7 +7,7 @@ This image is intended to be used mainly as a parent image for other images, suc
 
 ### Base Image
 
-* [dockerfile/debian](http://dockerfile.github.io/#/debian)
+* [dockerfile/debian](https://registry.hub.docker.com/_/debian/)
 
 ### Docker Tags
 
@@ -27,11 +27,11 @@ For example, you can run a `Oracle Java 8` with the command:
 
 ### Differences for [library/java](https://github.com/dockerfile/java) base image
 
-* Uses [dockerfile/debian:wheezy](http://dockerfile.github.io/#/debian) instead of [Ubuntu](https://github.com/dockerfile/ubuntu).
+* Uses [dockerfile/debian:wheezy](https://registry.hub.docker.com/_/debian/) instead of [Ubuntu](https://github.com/dockerfile/ubuntu).
 * Uses o [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) instead of [OpenJDK](http://openjdk.java.net/).
 * Installs [Java Cryptography Extension (JCE)](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
 
-**Important:** [JCE]((http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) is not available for java 6 version.
+**Important:** [JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) is not available for java 6 version.
 
 ### Uso
 
