@@ -55,12 +55,6 @@ View [license information](http://www.oracle.com/technetwork/java/javase/terms/l
 
 This image is officially supported on Docker version 1.6.2.
 
-# User Feedback
-
-## Documentation
-
-Documentation for this image is stored in the [`java/` directory](https://github.com/docker-library/docs/tree/master/java) of the [`docker-library/docs` GitHub repo](https://github.com/docker-library/docs). Be sure to familiarize yourself with the [repository's `README.md` file](https://github.com/docker-library/docs/blob/master/README.md) before attempting a pull request.
-
-## Issues
+# Issues
 
 If you have any problems with or questions about this image, please contact me through a [GitHub issue](https://github.com/andreptb/Dockerfiles/issues).
