@@ -16,7 +16,7 @@ This image is intended to be used mainly as a parent image for other images, suc
 * `latest` (default): Oracle JDK 8 (alias for `8`)
 * `8`: Oracle Java 8 JDK
 * `7`: Oracle Java 7 JDK
-* `6`: Oracle Java 8 JDK
+* `6`: Oracle Java 6 JDK
 * `1.8.0_40`: Oracle Java 8 JDK update 40
 * `1.7.0_80`: Oracle Java 7 JDK update 80
 * `1.6.0_45`: Oracle Java 6 JDK update 45
