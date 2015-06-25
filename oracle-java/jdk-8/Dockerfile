@@ -17,6 +17,3 @@ WORKDIR /data
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-$JAVA_VERSION-oracle
-
-# Define default command.
-CMD ['bash']
