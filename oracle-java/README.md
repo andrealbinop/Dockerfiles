@@ -41,9 +41,10 @@ This will add your current directory as a volume to the container, set the worki
 
 # What are the differences between this image and [library/java](https://github.com/dockerfile/java)?
 
-* Uses [dockerfile/debian:wheezy](https://registry.hub.docker.com/_/debian/) instead of [Ubuntu](https://github.com/dockerfile/ubuntu).
+* Uses [dockerfile/debian:jessie](https://registry.hub.docker.com/_/debian/) instead of [Ubuntu](https://github.com/dockerfile/ubuntu).
 * Uses [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) instead of [OpenJDK](http://openjdk.java.net/).
 * Installs [Java Cryptography Extension (JCE)](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
+* Pro
 
 **Important:** [JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) is not available for java 6 version.
 
