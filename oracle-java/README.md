@@ -44,7 +44,7 @@ This will add your current directory as a volume to the container, set the worki
 * Uses [dockerfile/debian:jessie](https://registry.hub.docker.com/_/debian/) instead of [Ubuntu](https://github.com/dockerfile/ubuntu).
 * Uses [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) instead of [OpenJDK](http://openjdk.java.net/).
 * Installs [Java Cryptography Extension (JCE)](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
-* Pro
+* Adds [Augeas](http://augeas.net/) configuration editing tool.
 
 **Important:** [JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) is not available for java 6 version.
 
