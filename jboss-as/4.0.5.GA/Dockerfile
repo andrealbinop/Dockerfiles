@@ -2,7 +2,7 @@ FROM andreptb/oracle-java:6
 
 # JBoss version
 ENV JBOSS_VERSION 4.0.5.GA
-ENV JBOSS_HOME /opt/jboss/jboss5
+ENV JBOSS_HOME /opt/jboss/jboss4
 
 # default port
 EXPOSE 8080

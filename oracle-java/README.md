@@ -45,6 +45,7 @@ This will add your current directory as a volume to the container, set the worki
 * Uses [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) instead of [OpenJDK](http://openjdk.java.net/).
 * Installs [Java Cryptography Extension (JCE)](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
 * Adds [Augeas](http://augeas.net/) configuration editing tool.
+* Adds [Groovy](http://www.groovy-lang.org/) script language tools.
 
 **Important:** [JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) is not available for java 6 version.
 
