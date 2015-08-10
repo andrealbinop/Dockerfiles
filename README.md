@@ -7,3 +7,4 @@ This repository contains all base **Dockerfiles** for [Docker](https://www.docke
 * [oracle-java](oracle-java/README.md): Base image with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html), providing versions for java 6, 7 and 8. Additionally, updates [Java Cryptography Extension (JCE)](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
 * [wildfly](wildfly/README.md): Base image with [JBoss WildFly](http://wildfly.org/), providing versions with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) 7 and 8.
 * [jboss-as](jboss-as/README.md): Base image with old versions of [JBoss Application Server](http://jbossas.jboss.org/), providing versions for families *4.X* and *5.X*.
+* [mule-esb](mule-esb/README.md): Docker Image packaging for MuleESB http://www.mulesoft.org with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) 7.
