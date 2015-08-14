@@ -1,14 +1,14 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`5.1.0.GA`, `latest`  (*jboss-as/5.1.0.GA/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss/5.1.0.GA/Dockerfile)
--	[`4.2.3.GA` (*jboss-as/4.2.3.GA/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss/4.2.3.GA/jdk-7/Dockerfile), [`4.2.3.GA-jdk7` (*jboss-as/4.2.3.GA/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss/4.2.3.GA/jdk-7/Dockerfile), [`4.2.3.GA-jdk6` (*jboss-as/4.2.3.GA/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss/4.2.3.GA/jdk-6/Dockerfile)
--	[`4.0.5.GA` (*jboss-as/4.0.5.GA/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss/4.0.5.GA/Dockerfile)
+-	[`5.1.0.GA`, `latest`  (*jboss-as/5.1.0.GA/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/5.1.0.GA/Dockerfile)
+-	[`4.2.3.GA` (*jboss-as/4.2.3.GA/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-7/Dockerfile), [`4.2.3.GA-jdk7` (*jboss-as/4.2.3.GA/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-7/Dockerfile), [`4.2.3.GA-jdk6` (*jboss-as/4.2.3.GA/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-6/Dockerfile)
+-	[`4.0.5.GA` (*jboss-as/4.0.5.GA/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.0.5.GA/Dockerfile)
 
 # JBossAS Docker image
 
 This is a Dockerfile with [JBoss application server](http://wildfly.org/). Encompasses [legacy versions](http://jbossas.jboss.org/) of [JBoss application server](http://wildfly.org/), currently providing images for families [*4.X*](https://developer.jboss.org/wiki/JBossApplicationServerOfficialDocumentationPage) and [*5.X*](http://jbossas.jboss.org/docs/5-x). If you wish to use latest versions (which is now called **WildFly**), please use  [*andreptb/wildfly*](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/jdk-8/Dockerfile) image.
 
-All versions
+**Important:** Only  [jboss-4.2.3.GA](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-7/Dockerfile) image contains [Apache Ant](http://ant.apache.org/) build tool.
 
 # JBossAS Documentation
 
