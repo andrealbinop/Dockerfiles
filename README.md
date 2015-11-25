@@ -9,4 +9,5 @@ This repository contains all base **Dockerfiles** for [Docker](https://www.docke
 * [tomcat](tomcat/README.md): Base image with [Apache Tomcat]http://tomcat.apache.org/), providing versions with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) 7 and 8.
 * [wildfly](wildfly/README.md): Base image with [JBoss WildFly](http://wildfly.org/), providing versions with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) 7 and 8.
 * [jboss-as](jboss-as/README.md): Base image with old versions of [JBoss Application Server](http://jbossas.jboss.org/), providing versions for families *4.X* and *5.X*.
-* [mule-esb](mule-esb/README.md): Docker Image packaging for MuleESB http://www.mulesoft.org with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) 7.
+* [mule-esb](mule-esb/README.md): Docker Image packaging for MuleESB http://www.mulesoft.org with [Oracle JDK 7](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html).
+* [grunt](grunt/README.md): Debian Jessie based image with [NodeJS](https://nodejs.org), [Grunt](http://gruntjs.com) and [Bower](http://bower.io/) installed.

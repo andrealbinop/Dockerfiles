@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`0.1.13`, `0.1.13-node-5.1.0, `latest` (*grunt/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/grunt/Dockerfile)
+-	[`0.1.13`, `0.1.13-node-5.1.0`, `latest` (*grunt/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/grunt/Dockerfile)
 
 ![logo](http://gruntjs.com/img/grunt-logo.svg)
 
