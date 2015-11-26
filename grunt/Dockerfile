@@ -18,7 +18,7 @@ ENV NODE_VERSION 5.1.0
 
 # dependencies commonly used by grunt based applications
 RUN apt-get update \
-  && apt-get install -y ruby git rubygems curl bzip2 \
+  && apt-get install -y ruby git rubygems curl bzip2 fontconfig \
   && gem install sass
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
