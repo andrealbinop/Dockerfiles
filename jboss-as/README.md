@@ -1,8 +1,10 @@
 # Supported tags and respective `Dockerfile` links
 
 -	[`5.1.0.GA`, `latest`  (*jboss-as/5.1.0.GA/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/5.1.0.GA/Dockerfile)
--	[`4.2.3.GA` (*jboss-as/4.2.3.GA/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-7/Dockerfile), [`4.2.3.GA-jdk7` (*jboss-as/4.2.3.GA/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-7/Dockerfile), [`4.2.3.GA-jdk6` (*jboss-as/4.2.3.GA/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-6/Dockerfile)
--	[`4.0.5.GA` (*jboss-as/4.0.5.GA/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.0.5.GA/Dockerfile)
+-	[`4.2.3.GA`, `4.2.3.GA-jdk7` (*jboss-as/4.2.3.GA/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-7/Dockerfile)
+- [`4.2.3.GA-jdk6` (*jboss-as/4.2.3.GA/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.2.3.GA/jdk-6/Dockerfile)
+-	[`4.0.5.GA`, `4.0.5.GA-jdk7` (*jboss-as/4.0.5.GA/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.0.5.GA/jdk-7/Dockerfile)
+-	[`4.0.5.GA-jdk6` (*jboss-as/4.0.5.GA/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/jboss-as/4.0.5.GA/jdk-6/Dockerfile)
 
 # JBossAS Docker image
 
