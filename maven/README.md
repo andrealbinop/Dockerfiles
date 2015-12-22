@@ -2,7 +2,7 @@
 
 -	[`latest`, `3.3.9-jdk8`, `3.3.9` (*jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/jdk-8/Dockerfile)
 -	[`3.3.9-jdk7` (*jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/jdk-7/Dockerfile)
--	[`3.3.9-jdk6` (*jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/jdk-6/Dockerfile)
+-	[`3.2.5`, `3.2.5-jdk6` (*jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/jdk-6/Dockerfile)
 
 # What is Maven?
 
