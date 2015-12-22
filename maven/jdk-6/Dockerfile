@@ -1,4 +1,4 @@
-FROM andreptb/oracle-java:7
+FROM andreptb/oracle-java:6
 
 ENV MAVEN_VERSION 3.3.9
 
