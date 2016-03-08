@@ -1,6 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`3.6.1`, `latest`  (*mule-esb/3.6.1/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/3.6.1/Dockerfile)
+-	[`3.7.0`, `latest`  (*mule-esb/3.7.0/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/3.7.0/Dockerfile)
+-	[`3.6.1`  (*mule-esb/3.6.1/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/3.6.1/Dockerfile)
 
 ## How to use
 ```
@@ -43,4 +44,3 @@ Differences between this image and [vromero/mule-docker](https://github.com/vrom
 
 * Uses [andreptb/oracle-java] instead of [java:openjdk-8-jdk]
 * Uses default port 8083 instead of 8081
-* Uses mule standalone 3.6.1 instead of 3.7.0
