@@ -21,7 +21,10 @@ RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
         "$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME" && \
     \
-    /usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 C.UTF-8 || true && \
+    /usr/glibc/usr/bin/ldconfig /lib /usr/glibc/usr/lib && \
+    # Hotfix for glibc hack that fixes the order of DNS resolving (i.e. check /etc/hosts first and then lookup DNS-servers).
+    # To fix this we just create /etc/nsswitch.conf and add the following line:
+    echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     echo "export LANG=C.UTF-8" > /etc/profile.d/locale.sh && \
     \
     apk del glibc-i18n && \
@@ -31,6 +34,7 @@ RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
         "$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME" && \
     cd "/tmp" && \
+    echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     wget -q -o /dev/null --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
         "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     tar -xzf "jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
