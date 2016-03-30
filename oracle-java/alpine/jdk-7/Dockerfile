@@ -21,7 +21,6 @@ RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
         "$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME" && \
     \
-    /usr/glibc/usr/bin/ldconfig /lib /usr/glibc/usr/lib && \
     # Hotfix for glibc hack that fixes the order of DNS resolving (i.e. check /etc/hosts first and then lookup DNS-servers).
     # To fix this we just create /etc/nsswitch.conf and add the following line:
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
