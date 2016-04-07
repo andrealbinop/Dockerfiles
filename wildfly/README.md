@@ -1,7 +1,9 @@
 # Supported tags and respective `Dockerfile` links
 
 -	[`8.2.0.Final`, `8.2.0.Final.jdk8`, `latest` (*wildfly/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/jdk-8/Dockerfile)
+-	[`8.2.0.Final-alpine`, `8.2.0.Final.jdk8-alpine` (*wildfly/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/alpine/jdk-8/Dockerfile)
 -	[`8.2.0.Final.jdk7` (*wildfly/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/jdk-7/Dockerfile)
+-	[`8.2.0.Final.jdk7-alpine` (*wildfly/alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/alpine/jdk-7/Dockerfile)
 
 # WildFly Docker image
 
@@ -78,6 +80,14 @@ Run it:
     docker run -it -p 9990:9990 andreptb/wildfly-admin
 
 The administration console should be available at http://localhost:9990.
+
+## Alpine image
+
+This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+
+This variant is highly recommended when final image size being as small as possible is desired. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+
+To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 ## License
 

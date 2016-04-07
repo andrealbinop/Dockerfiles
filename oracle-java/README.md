@@ -1,7 +1,9 @@
 # Supported tags and respective `Dockerfile` links
 
 -	[`8`, `1.8.0_66`, `latest` (*oracle-java/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/jdk-8/Dockerfile)
+-	[`8-alpine`, `1.8.0_77-alpine` (*oracle-java/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/alpine/jdk-8/Dockerfile)
 -	[`7`, `1.7.0_80`  (*oracle-java/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/jdk-7/Dockerfile)
+-	[`7-alpine`, `1.7.0_80-alpine`  (*oracle-java/alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/alpine/jdk-7/Dockerfile)
 -	[`6`, `1.6.0_45`  (*oracle-java/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/jdk-6/Dockerfile)
 
 # What is Java?
@@ -48,6 +50,15 @@ This will add your current directory as a volume to the container, set the worki
 * Adds [Groovy](http://www.groovy-lang.org/) script language tools.
 
 **Important:** [JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) is not available for java 6 version.
+
+
+# Alpine image
+
+This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+
+This variant is highly recommended when final image size being as small as possible is desired. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+
+To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 
