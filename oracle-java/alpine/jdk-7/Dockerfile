@@ -1,12 +1,14 @@
 FROM alpine:3.3
 
+MAINTAINER Luciano Mores <luciano.mores@gmail.com>
+
 ENV JAVA_VERSION=7  \
     JAVA_UPDATE=80 \
     JAVA_BUILD=15 \
     JAVA_HOME="/usr/lib/jvm/default-jvm" \
     LANG=C.UTF-8
 
-RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
+RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip && \
     ALPINE_GLIBC_BASE_URL="https://github.com/andyshinn/alpine-pkg-glibc/releases/download" && \
     ALPINE_GLIBC_PACKAGE_VERSION="2.23-r1" && \
     ALPINE_GLIBC_BASE_PACKAGE_FILENAME="glibc-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
@@ -36,10 +38,13 @@ RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     wget -q -o /dev/null --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
         "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
+    wget -q -o /dev/null --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
+        "http://download.oracle.com/otn-pub/java/jce/7/UnlimitedJCEPolicyJDK7.zip" && \
     tar -xzf "jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     mkdir -p "/usr/lib/jvm" && \
     mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
     ln -s "java-${JAVA_VERSION}-oracle" "$JAVA_HOME" && \
+    unzip -jo -d "$JAVA_HOME/jre/lib/security" "/tmp/UnlimitedJCEPolicyJDK7.zip" && \
     ln -s "$JAVA_HOME/bin/"* "/usr/bin/" && \
     rm -rf "$JAVA_HOME/"*src.zip && \
     rm -rf "$JAVA_HOME/lib/missioncontrol" \
