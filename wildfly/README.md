@@ -2,8 +2,10 @@
 
 -	[`8.2.0.Final`, `8.2.0.Final.jdk8`, `latest` (*wildfly/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/jdk-8/Dockerfile)  [![](https://badge.imagelayers.io/andreptb/wildfly:8.2.0.Final.jdk8.svg)](https://imagelayers.io/?images=andreptb/wildfly:8.2.0.Final.jdk8 'Get your own badge on imagelayers.io')
 -	[`8.2.0.Final-alpine`, `8.2.0.Final.jdk8-alpine` (*wildfly/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/alpine/jdk-8/Dockerfile)
+[![](https://badge.imagelayers.io/andreptb/wildfly:8.2.0.Final-alpine.svg)](https://imagelayers.io/?images=andreptb/wildfly:8.2.0.Final-alpine 'Get your own badge on imagelayers.io')
 -	[`8.2.0.Final.jdk7` (*wildfly/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/jdk-7/Dockerfile) [![](https://badge.imagelayers.io/andreptb/wildfly:8.2.0.Final.jdk7.svg)](https://imagelayers.io/?images=andreptb/wildfly:8.2.0.Final.jdk7 'Get your own badge on imagelayers.io')
 -	[`8.2.0.Final.jdk7-alpine` (*wildfly/alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/wildfly/alpine/jdk-7/Dockerfile)
+[![](https://badge.imagelayers.io/andreptb/wildfly:8.2.0.Final.jdk7-alpine)](https://imagelayers.io/?images=andreptb/wildfly:8.2.0.Final.jdk7-alpine 'Get your own badge on imagelayers.io')
 
 # WildFly Docker image
 
