@@ -9,7 +9,7 @@ RUN \
     echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee /etc/apt/sources.list.d/webupd8team-java.list && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 && \
     apt-get update && \
-    apt-get -y install augeas-tools curl groovy2 oracle-java$JAVA_VERSION-installer oracle-java$JAVA_VERSION-unlimited-jce-policy
+    apt-get -y install curl groovy2 oracle-java$JAVA_VERSION-installer oracle-java$JAVA_VERSION-unlimited-jce-policy
 
 # Define working directory.
 WORKDIR /data
