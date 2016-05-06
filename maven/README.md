@@ -1,7 +1,9 @@
 # Supported tags and respective `Dockerfile` links
 
 -	[`latest`, `3.3.9-jdk8`, `3.3.9` (*jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/jdk-8/Dockerfile)
+-	[`3.3.9-jdk8-alpine`, `3.3.9-alpine` (*alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/alpine/jdk-8/Dockerfile)
 -	[`3.3.9-jdk7` (*jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/jdk-7/Dockerfile)
+-	[`3.3.9-jdk7-alpine` (*alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/alpine/jdk-7/Dockerfile)
 -	[`3.2.5`, `3.2.5-jdk6` (*jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/maven/jdk-6/Dockerfile)
 
 # What is Maven?
@@ -35,6 +37,15 @@ This image is officially supported on Docker version 1.8.1.
 Support for older versions (down to 1.0) is provided on a best-effort basis.
 
 **Important:** [JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) is not available for java 6 version.
+
+# Alpine image
+
+This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+
+This variant is highly recommended when final image size being as small as possible is desired. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+
+To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
+
 
 # License
 
