@@ -2,7 +2,7 @@
 
 
 -	[`3.8.0`, `latest`  (*mule-esb/3.8.0/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/3.8.0/Dockerfile)
--	[`3.7.0`, `latest`  (*mule-esb/3.7.0/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/3.7.0/Dockerfile)
+-	[`3.7.0`  (*mule-esb/3.7.0/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/3.7.0/Dockerfile)
 -	[`3.6.1`  (*mule-esb/3.6.1/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/3.6.1/Dockerfile)
 -	[`3.8.0-alpine`  (*mule-esb/alpine/3.8.0/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/alpine/3.8.0/Dockerfile)
 -	[`3.7.0-alpine`  (*mule-esb/alpine/3.7.0/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/mule-esb/alpine/3.7.0/Dockerfile)
