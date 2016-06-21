@@ -1,11 +1,19 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`6.0.44-jdk7`, `6-jdk7`, `6.0.44`, `6` (*6-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6/jdk-7/Dockerfile)
--	[`6.0.44-jdk8`, `6.0-jdk8`  (*6-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6/jdk-8/Dockerfile)
--	[`7.0.65-jdk7`, `7-jdk7`, `7.0.65`, `7` (*7-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7/jdk-7/Dockerfile)
--	[`7.0.65-jdk8`, `7-jdk8` (*7-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7/jdk-8/Dockerfile)
--	[`8.0.28-jdk7`, `8-jdk7` (*8-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/jdk-7/Dockerfile)
--	[`8.0.28-jdk8`, `8-jdk8`, `8.0.28`, `8`, `latest` (*8-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/jdk-8/Dockerfile)
+-	[`6.0.45-jdk6`, `6-jdk6` (*6/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6/jdk-6/Dockerfile)
+-	[`6.0.45-jdk7`, `6-jdk7`, `6.0.45`, `6` (*6/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6/jdk-7/Dockerfile)
+-	[`6.0.45-jdk8`, `6-jdk8`  (*6/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6/jdk-8/Dockerfile)
+-	[`6.0.45-jdk6-alpine`, `6-jdk6-alpine` (*6/alpine/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6/alpine/jdk-6/Dockerfile)
+-	[`6.0.45-jdk7-alpine`, `6-jdk7-alpine`, `6.0.45-alpine`, `6-alpine` (6/alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6/alpine/jdk-7/Dockerfile)
+-	[`6.0.45-jdk8-alpine`, `6-jdk8-alpine` (6/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6/alpine/jdk-8/Dockerfile)
+-	[`7.0.70-jdk7`, `7-jdk7`, `7.0.70`, `7` (*7/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7/jdk-7/Dockerfile)
+-	[`7.0.70-jdk8`, `7-jdk8`  (*7/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7/jdk-8/Dockerfile)
+-	[`7.0.70-jdk7-alpine`, `7-jdk7-alpine`, `7.0.70-alpine`, `7-alpine` (7/alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7/alpine/jdk-7/Dockerfile)
+-	[`7.0.70-jdk8-alpine`, `7-jdk8-alpine` (7/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7/alpine/jdk-8/Dockerfile)
+-	[`8.0.36-jdk7`, `8-jdk7`, `8.0.36`, `8` (*8/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/jdk-7/Dockerfile)
+-	[`8.0.36-jdk8`, `8-jdk8`  (*8/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/jdk-8/Dockerfile)
+-	[`8.0.36-jdk7-alpine`, `8-jdk7-alpine`, `8.0.36-alpine`, `8-alpine` (8/alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/alpine/jdk-7/Dockerfile)
+-	[`8.0.36-jdk8-alpine`, `8-jdk8-alpine` (8/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/alpine/jdk-8/Dockerfile)
 
   # What is Tomcat?
 
@@ -52,7 +60,16 @@ The configuration files are available in `/usr/local/tomcat/conf/`. By default, 
 ## What are the differences between this image and [docker-library/tomcat](https://github.com/docker-library/tomcat)?
 
 * Uses andreptb/oracle-java](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java) instead of [docker-library/java](https://github.com/docker-library/java).
-* Provides base images with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) 7 and 8.
+* Provides base images with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) 6 (only tomcat 6), 7 and 8.
+* [Alpine](http://alpinelinux.org) images with [APR](https://apr.apache.org/) support. Check below for more information.
+
+# Alpine image
+
+This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+
+This variant is highly recommended when final image size being as small as possible is desired. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+
+To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

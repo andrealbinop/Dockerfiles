@@ -1,4 +1,5 @@
 FROM andreptb/oracle-java:7
+MAINTAINER Andre Albino Pereira <andreptb@gmail.com>
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
