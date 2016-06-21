@@ -12,8 +12,8 @@
 -	[`7.0.70-jdk8-alpine`, `7-jdk8-alpine` (7/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7/alpine/jdk-8/Dockerfile)
 -	[`8.0.36-jdk7`, `8-jdk7`, `8.0.36`, `8` (*8/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/jdk-7/Dockerfile)
 -	[`8.0.36-jdk8`, `8-jdk8`  (*8/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/jdk-8/Dockerfile)
--	[`8.0.36-jdk7-alpine`, `8-jdk7-alpine`, `8.0.36-alpine`, `8-alpine` (8/alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/alpine/jdk-7/Dockerfile)
--	[`8.0.36-jdk8-alpine`, `8-jdk8-alpine` (8/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/alpine/jdk-8/Dockerfile)
+-	[`8.0.36-jdk7-alpine`, `8-jdk7-alpine` (8/alpine/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/alpine/jdk-7/Dockerfile)
+-	[`8.0.36-jdk8-alpine`, `8-jdk8-alpine`, `8.0.36-alpine`, `8-alpine` (8/alpine/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8/alpine/jdk-8/Dockerfile)
 
   # What is Tomcat?
 
