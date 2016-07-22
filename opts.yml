@@ -1,0 +1,11 @@
+maintainer: Andre Albino Pereira <andreptb@gmail.com>
+user: andreptb
+
+java_version:
+  tag:
+    8-jdk7: 7
+    8-jdk8: 8
+    7-jdk7: 7
+    7-jdk8: 8
+    6-jdk6: 6
+    6-jdk7: 7

@@ -1,0 +1,41 @@
+tomcat_8_latest: &tomcat_8_latest 8.0.36
+tomcat_7_latest: &tomcat_7_latest 7.0.70
+tomcat_6_latest: &tomcat_6_latest 6.0.45
+
+tags:
+  8-jdk7: 8
+  8-jdk8: 8
+  7-jdk7: 7
+  7-jdk8: 7
+  6-jdk6: 6
+  6-jdk7: 6
+
+aliases:
+  latest: 8
+  8: 8-jdk8
+  8.0.36-jdk8: 8-jdk8
+  8.0.36-jdk7: 8-jdk7
+  7: 7-jdk8
+  7.0.70-jdk8: 7-jdk8
+  7.0.70-jdk7: 7-jdk7
+  6: 6-jdk7
+  6.0.45-jdk7: 6-jdk7
+  6.0.45-jdk6: 6-jdk6
+
+tomcat_major_version:
+  group:
+    8: 8
+    7: 7
+    6: 6
+
+tomcat_minor_version:
+  group:
+    8: *tomcat_8_latest
+    7: *tomcat_7_latest
+    6: *tomcat_6_latest
+
+apr_version:
+  all: 1.5.2
+
+tomcat_native_version:
+  all: 1.2.8
