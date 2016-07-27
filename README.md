@@ -25,15 +25,27 @@ For maintainability some base images are created using templates. Usually some i
 
 ### Docker-template
 
-As described earlier, the `update-dockerfile.sh` script depends on `docker-template`. The easiest way to have `docker-template` installed is to use the `Gemfile` provided. Simply run
+As described earlier, the `update-dockerfile.sh` script depends on `docker-template`. Docker-template requires Ruby 2.1+. So, firstly you need Ruby 2.1+ up and running in your system. The update script supports calling **docker template** through both `docker-template` and `bundler exec docker-template`. Therefore, there is two ways of installing to have `docker-template` installed, once you have `ruby` in your system.
+
+* Use the `Gemfile` provided and install via Bundler and it should be available to you through `bundler exec docker-template`.
 
 ```shell
+# install bundler system-wide, if not installed yet
+sudo gem install bundler
+
+# install ruby dependencies in this project (docker-template)
 bundler install
 ```
 
-and `docker-template` should be available to you.
+* Install through [rubygems] and it will be available system-wide through `docker-template`
+```shell
+sudo gem install docker-template
+```
 
-For reference how to use docker-template visit its [wiki][docker-template-wiki] and this 2 example projects: [jekyll][jekyll-docker] and [envygeeks-docker].
+> **Important:** Docker template 0.9.0+ is required. As 2016-07-27, it has not been released in **rubygems**. Installation through `bundler`, pointing to project `master` branch, is required to this project work.
+> Once version 0.9.0 is released, system-wide installation through `gem install` will work as well.
+
+For reference how to use docker-template visit its [wiki][docker-template-wiki] and this 2 example projects: [jekyll-docker] and [envygeeks-docker].
 
 ### Update-dockerfile
 
@@ -143,3 +155,4 @@ Uses `./update-dockerfile.sh --help` for usage.
 [jekyll-docker]: https://github.com/jekyll/docker/
 [ruby]: https://ruby-lang.org/
 [erb]: https://en.wikipedia.org/wiki/ERuby
+[rubygems]: https://rubygems.org/
