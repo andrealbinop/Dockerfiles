@@ -159,7 +159,7 @@ function load_repositories() {
   IFS_BAK=$IFS
   IFS='
 '
-  for line in $(docker-template list); do
+  for line in $(docker-template list | bundler exec docker-template list); do
     clean_line=$(cleanup_output $line)
     log debug "line... ${line} => ${clean_line}"
 
@@ -227,7 +227,7 @@ update_repositories() {
     done
 
     # Cache the updated Dockerfiles
-    docker-template cache $repository
+    docker-template cache $repository | bundler exec docker-template cache $repository
 
     # Generate and caches README
     readme=$(create_readme "$repository" "$repo_cache_readme_file")
@@ -250,6 +250,12 @@ update_repositories() {
 
 LOG_LEVEL=${LOG_LEVEL:-1}
 PROJECT_URL="https://github.com/andreptb/Dockerfiles"
+if $(which docker-template) ; then
+  DOCKER_TEMPLATE='docker-template'
+else
+  DOCKER_TEMPLATE='bundler exec docker-template'
+fi
+log debug "docker-template through ${DOCKER_TEMPLATE}"
 
 REPO_NAME=$@
 REPOSITORIES=
