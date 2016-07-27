@@ -1,1 +1,8 @@
+# Temporary files
 .tmp
+
+# Bundler runtime files
+Gemfile.lock
+
+# Dockertemplate caches
+**/cache/
