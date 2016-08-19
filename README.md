@@ -19,116 +19,15 @@ This section cover information to anyone who may contribute to this project, or 
 
 ## Template-based images
 
-For maintainability some base images are created using templates. Usually some images have multiple versions, e.g. based in major releases or OS-based images (Debian/Alpine). The `Dockerfiles` for different versions of an image, most of the time, are basically the same. Most common variables are product and dependency versions. Thus, it is really error prone manually modify many similar files. For those cases [docker-template] is used.
+For maintainability some base images are created using templates. For instance:
 
-[Docker-template] is a utility tool written in [Ruby] that allows writing `Dockerfiles` using [ERB] templates. It also uses a `opts.yml` file to describe all variables for substitution. It is meant for deploying images right from templates, without saving it. Therefore, it usually does not keep generated `Dockerfiles`. We do keep these generated files, so we wrapped it up with a `update-dockerfile.sh` script. The script uses `docker-template cache` and `docker-template list` outputs to generate and update project files.
+- Tomcat
 
-### Docker-template
+These images are based in [docker-template] project. It provides the infrastructure, parsing e generation of the `Dockerfiles` based in [ERB] templates. It also uses variables defined in `opts.yml` files to drive the templated data. For details about how to write images based in docker-template, see [docker-template wiki][docker-template-wiki], as its example projects [jekyll-docker] and [envygeeks-docker].
 
-As described earlier, the `update-dockerfile.sh` script depends on `docker-template`. Docker-template requires Ruby 2.1+. So, firstly you need Ruby 2.1+ up and running in your system. The update script supports calling **docker template** through both `docker-template` and `bundler exec docker-template`. Therefore, there is two ways of installing to have `docker-template` installed, once you have `ruby` in your system.
+**Docker-template** is not meant to handle the images as we do here. More than just processing the templates, it focus in **building** and **pushing** directly the images. We use it only as an engine to parse our templates, but we keep the resulting `Dockerfiles`. As we use webhooks to trigger images build and push to [Docker Hub][docker-hub]. To fill the gap, we use the [docker-template-wrapper], a shell script wrapper around **docker-template** that allow us to manage the images just as we do here.
 
-* Use the `Gemfile` provided and install via Bundler and it should be available to you through `bundler exec docker-template`.
-
-```shell
-# install bundler system-wide, if not installed yet
-sudo gem install bundler
-
-# install ruby dependencies in this project (docker-template)
-bundler install
-```
-
-* Install through [rubygems] and it will be available system-wide through `docker-template`
-```shell
-sudo gem install docker-template
-```
-
-> **Important:** Docker template 0.9.0+ is required. As 2016-07-27, it has not been released in **rubygems**. Installation through `bundler`, pointing to project `master` branch, is required to this project work.
-> Once version 0.9.0 is released, system-wide installation through `gem install` will work as well.
-
-For reference how to use docker-template visit its [wiki][docker-template-wiki] and this 2 example projects: [jekyll-docker] and [envygeeks-docker].
-
-### Update-dockerfile
-
-Following the `docker-template` schema, templates are located into `/repos/[image]` directory in this repository. The `/opts.yml` holds configurations applied to all images, like maintainer, or used in `FROM` directive (docker-template limitation). Each image, repository in docker-template lingo, has the following files under `/repos/[image]`:
-* `Dockerfile`: ERB-templated dockerfile.
-* `opts.yml`: Image specific configurations.
-* `README.md`: Image README without the "Supported versions and tags" section. (extension of this project)
-
-Example:
-```shell
-~/projects/andreptb-dockerfiles $ ls -lhR repos/tomcat
-repos/tomcat:
-total 36K
--rw-rw-r-- 1 user user 2,8K Jul 22 15:50 Dockerfile
--rw-rw-r-- 1 user user  619 Jul 22 15:50 opts.yml
--rw-rw-r-- 1 user user 3,9K Jul 22 15:50 README.md
-```
-
-Executing `update-dockerfile.sh`, it will create a `/[image]` directory within the repository root folder for each image inside `/repos/[image]`. This image folder will contain:
-* a `README.md` generated from `/repos/[image]/README.md`, inserting a section of all tags (versions) provided (with links) on its top.
-* a folder per `tag` in `opts.yml` with:
-    * a symlink to the image's `README.md`
-    * a plain `Dockerfile`
-
-Example:
-```shell
-~/projects/andreptb-dockerfiles $ ls -lhR tomcat
-tomcat:
-total 40K
-drwxrwxr-x 2 user user 4,0K Jul 22 15:50 6-jdk6
-drwxrwxr-x 2 user user 4,0K Jul 22 15:50 6-jdk7
-drwxrwxr-x 2 user user 4,0K Jul 22 15:50 7-jdk7
-drwxrwxr-x 2 user user 4,0K Jul 22 15:50 7-jdk8
-drwxrwxr-x 2 user user 4,0K Jul 22 15:50 8-jdk7
-drwxrwxr-x 2 user user 4,0K Jul 22 15:50 8-jdk8
--rw-rw-r-- 1 user user 4,7K Jul 22 15:50 README.md
-
-tomcat/6-jdk6:
-total 16K
--rw-rw-r-- 1 user user 2,7K Jul 22 15:50 Dockerfile
-lrwxrwxrwx 1 user user   12 Jul 22 15:50 README.md -> ../README.md
-
-tomcat/6-jdk7:
-total 16K
--rw-rw-r-- 1 user user 2,7K Jul 22 15:50 Dockerfile
-lrwxrwxrwx 1 user user   12 Jul 22 15:50 README.md -> ../README.md
-
-tomcat/7-jdk7:
-total 16K
--rw-rw-r-- 1 user user 2,7K Jul 22 15:50 Dockerfile
-lrwxrwxrwx 1 user user   12 Jul 22 15:50 README.md -> ../README.md
-
-tomcat/7-jdk8:
-total 16K
--rw-rw-r-- 1 user user 2,7K Jul 22 15:50 Dockerfile
-lrwxrwxrwx 1 user user   12 Jul 22 15:50 README.md -> ../README.md
-
-tomcat/8-jdk7:
-total 16K
--rw-rw-r-- 1 user user 2,7K Jul 22 15:50 Dockerfile
-lrwxrwxrwx 1 user user   12 Jul 22 15:50 README.md -> ../README.md
-
-tomcat/8-jdk8:
-total 16K
--rw-rw-r-- 1 user user 2,7K Jul 22 15:50 Dockerfile
-lrwxrwxrwx 1 user user   12 Jul 22 15:50 README.md -> ../README.md
-```
-
-
-The script supports update all images or a list of given ones.
-
-```shell
-# update all images/repositories in docker-template lingo
-./update-dockerfile.sh
-
-# update only tomcat image
-./update-dockerfile.sh tomcat
-
-# update tomcat and oracle-java images
-./update-dockerfile.sh tomcat oracle-java
-```
-
-Uses `./update-dockerfile.sh --help` for usage.
+See **docker-template-wrapper** [README][docker-template-wrapper-readme] to know how to use it.
 
 [oracle-java-readme]: oracle-java/README.md
 [maven-readme]: maven/README.md
@@ -137,6 +36,8 @@ Uses `./update-dockerfile.sh --help` for usage.
 [jboss-as-readme]: jboss-as/README.md
 [mule-esb-readme]: mule-esb/README.md
 [grunt-readme]: grunt/README.md
+
+[docker-hub]: https://hub.docker.com/
 
 [oracle-jdk]: http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html
 [JCE]: http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
@@ -153,6 +54,5 @@ Uses `./update-dockerfile.sh --help` for usage.
 [docker-template-wiki]: https://github.com/envygeeks/docker-template/wiki
 [envygeeks-docker]: https://github.com/envygeeks/docker/
 [jekyll-docker]: https://github.com/jekyll/docker/
-[ruby]: https://ruby-lang.org/
-[erb]: https://en.wikipedia.org/wiki/ERuby
-[rubygems]: https://rubygems.org/
+[docker-template-wrapper]: https://github.com/rflbianco/docker-template-wrapper
+[docker-template-wrapper-readme]: https://github.com/rflbianco/docker-template-wrapper/blob/master/README.md
