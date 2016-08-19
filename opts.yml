@@ -1,6 +1,9 @@
 maintainer: Andre Albino Pereira <andreptb@gmail.com>
 user: andreptb
 
+clean: false
+cache_only: true
+
 java_version:
   tag:
     8-jdk7: 7
