@@ -23,7 +23,7 @@ RUN apk upgrade --update && \
     curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/UnlimitedJCEPolicyJDK${JAVA_VERSION}.zip \
         "http://download.oracle.com/otn-pub/java/jce/${JAVA_VERSION}/UnlimitedJCEPolicyJDK${JAVA_VERSION}.zip" && \
     gunzip /tmp/java.tar.gz && \
-    tar -C /tmp -xf /tmp/java.tar && \s
+    tar -C /tmp -xf /tmp/java.tar && \
     mkdir -p "/usr/lib/jvm" && \
     mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
     ln -s "java-${JAVA_VERSION}-oracle" "$JAVA_HOME" && \
