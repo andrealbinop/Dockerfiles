@@ -16,13 +16,14 @@ RUN apk upgrade --update && \
     rm -v /tmp/*.apk && \
     ( /usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 C.UTF-8 || true ) && \
     echo "export LANG=C.UTF-8" > /etc/profile.d/locale.sh && \
+    /usr/glibc-compat/sbin/ldconfig /lib /usr/glibc-compat/lib && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/java.tar.gz \
         "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/UnlimitedJCEPolicyJDK${JAVA_VERSION}.zip \
         "http://download.oracle.com/otn-pub/java/jce/${JAVA_VERSION}/UnlimitedJCEPolicyJDK${JAVA_VERSION}.zip" && \
     gunzip /tmp/java.tar.gz && \
-    tar -C /tmp -xf /tmp/java.tar && \
+    tar -C /tmp -xf /tmp/java.tar && \s
     mkdir -p "/usr/lib/jvm" && \
     mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
     ln -s "java-${JAVA_VERSION}-oracle" "$JAVA_HOME" && \
