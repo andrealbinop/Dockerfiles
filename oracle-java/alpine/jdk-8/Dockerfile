@@ -3,7 +3,7 @@ FROM alpine:3.4
 MAINTAINER Luciano Mores <luciano.mores@gmail.com>
 
 ENV JAVA_VERSION=8  \
-    JAVA_UPDATE=91 \
+    JAVA_UPDATE=102 \
     JAVA_BUILD=14 \
     JAVA_HOME="/usr/lib/jvm/default-jvm" \
     LANG=C.UTF-8 \
