@@ -1,4 +1,4 @@
-FROM andreptb/oracle-java:<%= @meta.java_version %>-alpine
+FROM andreptb/oracle-java:<%= @meta.java_version %>
 MAINTAINER <%= @meta.maintainer %>
 
 ENV CATALINA_HOME="<%= @meta.catalina_home %>" \

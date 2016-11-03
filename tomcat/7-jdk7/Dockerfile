@@ -1,10 +1,10 @@
-FROM andreptb/oracle-java:7-alpine
+FROM andreptb/oracle-java:7
 MAINTAINER Andre Albino Pereira <andreptb@gmail.com>
 
 ENV CATALINA_HOME="/usr/local/tomcat" \
     PATH="/usr/local/tomcat/bin:$PATH" \
     TOMCAT_MAJOR_VERSION=7 \
-    TOMCAT_MINOR_VERSION=7.0.70 \
+    TOMCAT_MINOR_VERSION=7.0.72 \
     APACHE_MIRROR="https://archive.apache.org/dist" \
     APR_VERSION=1.5.2 \
     TOMCAT_NATIVE_VERSION=1.2.8

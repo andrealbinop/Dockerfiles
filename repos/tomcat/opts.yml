@@ -1,8 +1,10 @@
-tomcat_8_latest: &tomcat_8_latest 8.0.37
-tomcat_7_latest: &tomcat_7_latest 7.0.70
-tomcat_6_latest: &tomcat_6_latest 6.0.45
+tomcat_85_latest: &tomcat_85_latest 8.5.6
+tomcat_8_latest: &tomcat_8_latest 8.0.38
+tomcat_7_latest: &tomcat_7_latest 7.0.72
+tomcat_6_latest: &tomcat_6_latest 6.0.47
 
 tags:
+  8.5-jdk8: 8.5
   8-jdk7: 8
   8-jdk8: 8
   7-jdk7: 7
@@ -11,28 +13,42 @@ tags:
   6-jdk7: 6
 
 aliases:
-  latest: 8
+  latest: 8.5
+  8.5: 8.5-jdk8
+  8.5.6-jdk8: 8.5-jdk8
   8: 8-jdk8
-  8.0.37-jdk8: 8-jdk8
-  8.0.37-jdk7: 8-jdk7
+  8.0.38-jdk8: 8-jdk8
+  8.0.38-jdk7: 8-jdk7
   7: 7-jdk8
-  7.0.70-jdk8: 7-jdk8
-  7.0.70-jdk7: 7-jdk7
+  7.0.72-jdk8: 7-jdk8
+  7.0.72-jdk7: 7-jdk7
   6: 6-jdk7
-  6.0.45-jdk7: 6-jdk7
-  6.0.45-jdk6: 6-jdk6
+  6.0.47-jdk7: 6-jdk7
+  6.0.47-jdk6: 6-jdk6
 
 tomcat_major_version:
   group:
+    8.5: 8
     8: 8
     7: 7
     6: 6
 
 tomcat_minor_version:
   group:
+    8.5: *tomcat_85_latest
     8: *tomcat_8_latest
     7: *tomcat_7_latest
     6: *tomcat_6_latest
+
+java_version:
+  tag:
+    8.5-jdk8: 8
+    8-jdk7: 7
+    8-jdk8: 8
+    7-jdk7: 7
+    7-jdk8: 8
+    6-jdk6: 6
+    6-jdk7: 7
 
 tomcat_signing_key:
   all:
