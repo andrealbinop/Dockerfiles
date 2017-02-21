@@ -1,5 +1,5 @@
 tomcat_85_latest: &tomcat_85_latest 8.5.6
-tomcat_8_latest: &tomcat_8_latest 8.0.38
+tomcat_8_latest: &tomcat_8_latest 8.0.41
 tomcat_7_latest: &tomcat_7_latest 7.0.72
 tomcat_6_latest: &tomcat_6_latest 6.0.47
 
@@ -17,8 +17,8 @@ aliases:
   8.5: 8.5-jdk8
   8.5.6-jdk8: 8.5-jdk8
   8: 8-jdk8
-  8.0.38-jdk8: 8-jdk8
-  8.0.38-jdk7: 8-jdk7
+  8.0.41-jdk8: 8-jdk8
+  8.0.41-jdk7: 8-jdk7
   7: 7-jdk8
   7.0.72-jdk8: 7-jdk8
   7.0.72-jdk7: 7-jdk7
