@@ -4,7 +4,7 @@ MAINTAINER Andre Albino Pereira <andreptb@gmail.com>
 ENV CATALINA_HOME="/usr/local/tomcat" \
     PATH="/usr/local/tomcat/bin:$PATH" \
     TOMCAT_MAJOR_VERSION=8 \
-    TOMCAT_MINOR_VERSION=8.5.6 \
+    TOMCAT_MINOR_VERSION=8.5.11 \
     APACHE_MIRROR="https://archive.apache.org/dist" \
     APR_VERSION=1.5.2 \
     TOMCAT_NATIVE_VERSION=1.2.8
