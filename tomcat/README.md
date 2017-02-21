@@ -3,10 +3,10 @@
 - [`8.5-jdk8`, `8.5`, `latest`, `8.5.6-jdk8` (*8.5-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8.5-jdk8/Dockerfile)
 - [`8-jdk7`, `8.0.41-jdk7` (*8-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8-jdk7/Dockerfile)
 - [`8-jdk8`, `8`, `8.0.41-jdk8` (*8-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8-jdk8/Dockerfile)
-- [`7-jdk7`, `7.0.72-jdk7` (*7-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk7/Dockerfile)
-- [`7-jdk8`, `7`, `7.0.72-jdk8` (*7-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk8/Dockerfile)
-- [`6-jdk6`, `6.0.47-jdk6` (*6-jdk6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6-jdk6/Dockerfile)
-- [`6-jdk7`, `6`, `6.0.47-jdk7` (*6-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6-jdk7/Dockerfile)
+- [`7-jdk7`, `7.0.75-jdk7` (*7-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk7/Dockerfile)
+- [`7-jdk8`, `7`, `7.0.75-jdk8` (*7-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk8/Dockerfile)
+- [`6-jdk6`, `6.0.48-jdk6` (*6-jdk6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6-jdk6/Dockerfile)
+- [`6-jdk7`, `6`, `6.0.48-jdk7` (*6-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6-jdk7/Dockerfile)
 
 # What is Tomcat?
 
