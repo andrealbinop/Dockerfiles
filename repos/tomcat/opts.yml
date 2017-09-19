@@ -1,6 +1,6 @@
-tomcat_85_latest: &tomcat_85_latest 8.5.15
-tomcat_8_latest: &tomcat_8_latest 8.0.43
-tomcat_7_latest: &tomcat_7_latest 7.0.77
+tomcat_85_latest: &tomcat_85_latest 8.5.20
+tomcat_8_latest: &tomcat_8_latest 8.0.46
+tomcat_7_latest: &tomcat_7_latest 7.0.81
 tomcat_6_latest: &tomcat_6_latest 6.0.53
 
 tags:
@@ -15,13 +15,13 @@ tags:
 aliases:
   latest: 8.5
   8.5: 8.5-jdk8
-  8.5.15-jdk8: 8.5-jdk8
+  8.5.20-jdk8: 8.5-jdk8
   8: 8-jdk8
-  8.0.43-jdk8: 8-jdk8
-  8.0.43-jdk7: 8-jdk7
+  8.0.46-jdk8: 8-jdk8
+  8.0.46-jdk7: 8-jdk7
   7: 7-jdk8
-  7.0.77-jdk8: 7-jdk8
-  7.0.77-jdk7: 7-jdk7
+  7.0.81-jdk8: 7-jdk8
+  7.0.81-jdk7: 7-jdk7
   6: 6-jdk7
   6.0.53-jdk7: 6-jdk7
   6.0.53-jdk6: 6-jdk6
@@ -72,10 +72,10 @@ tomcat_signing_key:
       - 8B39757B1D8A994DF2433ED58B3A601F08C975E5
 
 apr_version:
-  all: 1.5.2
+  all: 1.6.2
 
 tomcat_native_version:
-  all: 1.2.8
+  all: 1.2.14
 
 catalina_home:
   all: "/usr/local/tomcat"
