@@ -1,13 +1,14 @@
-FROM alpine:3.4
+FROM alpine:3.6
 
 MAINTAINER Luciano Mores <luciano.mores@gmail.com>
 
 ENV JAVA_VERSION=8  \
-    JAVA_UPDATE=112 \
-    JAVA_BUILD=15 \
+    JAVA_UPDATE=144 \
+    JAVA_BUILD=01 \
     JAVA_HOME="/usr/lib/jvm/default-jvm" \
     LANG=C.UTF-8 \
-    GLIBC_VERSION=2.23-r3
+    GLIBC_VERSION=2.25-r0 \
+    ORACLE_AUTHORIZATION_KEY=090f390dda5b47b9b721c7dfaa008135
 
 RUN apk upgrade --update && \
     apk add --no-cache --virtual=build-dependencies libstdc++ curl ca-certificates unzip && \
@@ -19,7 +20,7 @@ RUN apk upgrade --update && \
     /usr/glibc-compat/sbin/ldconfig /lib /usr/glibc-compat/lib && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/java.tar.gz \
-        "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
+        "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/${ORACLE_AUTHORIZATION_KEY}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/jce_policy-${JAVA_VERSION}.zip \
         "http://download.oracle.com/otn-pub/java/jce/${JAVA_VERSION}/jce_policy-${JAVA_VERSION}.zip" && \
     gunzip /tmp/java.tar.gz && \

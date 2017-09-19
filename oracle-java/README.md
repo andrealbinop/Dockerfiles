@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`8`, `1.8.0_112`, `8-alpine`, `1.8.0_112-alpine`, `latest` (*oracle-java/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/jdk-8/Dockerfile) [![](https://badge.imagelayers.io/andreptb/oracle-java:1.8.0_91.svg)](https://imagelayers.io/?images=andreptb/oracle-java:1.8.0_91 'Get your own badge on imagelayers.io')
+-	[`8`, `1.8.0_144`, `8-alpine`, `1.8.0_144-alpine`, `latest` (*oracle-java/jdk-8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/jdk-8/Dockerfile) [![](https://badge.imagelayers.io/andreptb/oracle-java:1.8.0_91.svg)](https://imagelayers.io/?images=andreptb/oracle-java:1.8.0_91 'Get your own badge on imagelayers.io')
 -	[`7`, `1.7.0_80`, `7-alpine`, `1.7.0_80-alpine` (*oracle-java/jdk-7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/jdk-7/Dockerfile) [![](https://badge.imagelayers.io/andreptb/oracle-java:1.7.0_80.svg)](https://imagelayers.io/?images=andreptb/oracle-java:1.7.0_80 'Get your own badge on imagelayers.io')
 -	[`6`, `1.6.0_45`, `6-alpine`, `1.6.0_45-alpine`  (*oracle-java/jdk-6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java/jdk-6/Dockerfile) [![](https://badge.imagelayers.io/andreptb/oracle-java:1.6.0_45.svg)](https://imagelayers.io/?images=andreptb/oracle-java:1.6.0_45 'Get your own badge on imagelayers.io')
 
