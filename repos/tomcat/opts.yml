@@ -1,6 +1,6 @@
-tomcat_85_latest: &tomcat_85_latest 8.5.20
-tomcat_8_latest: &tomcat_8_latest 8.0.46
-tomcat_7_latest: &tomcat_7_latest 7.0.81
+tomcat_85_latest: &tomcat_85_latest 8.5.23
+tomcat_8_latest: &tomcat_8_latest 8.0.47
+tomcat_7_latest: &tomcat_7_latest 7.0.82
 tomcat_6_latest: &tomcat_6_latest 6.0.53
 
 tags:
@@ -15,13 +15,13 @@ tags:
 aliases:
   latest: 8.5
   8.5: 8.5-jdk8
-  8.5.20-jdk8: 8.5-jdk8
+  8.5.23-jdk8: 8.5-jdk8
   8: 8-jdk8
-  8.0.46-jdk8: 8-jdk8
-  8.0.46-jdk7: 8-jdk7
+  8.0.47-jdk8: 8-jdk8
+  8.0.47-jdk7: 8-jdk7
   7: 7-jdk8
-  7.0.81-jdk8: 7-jdk8
-  7.0.81-jdk7: 7-jdk7
+  7.0.82-jdk8: 7-jdk8
+  7.0.82-jdk7: 7-jdk7
   6: 6-jdk7
   6.0.53-jdk7: 6-jdk7
   6.0.53-jdk6: 6-jdk6
