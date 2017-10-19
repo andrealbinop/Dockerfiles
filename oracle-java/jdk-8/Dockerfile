@@ -3,12 +3,12 @@ FROM alpine:3.6
 MAINTAINER Luciano Mores <luciano.mores@gmail.com>
 
 ENV JAVA_VERSION=8  \
-    JAVA_UPDATE=144 \
-    JAVA_BUILD=01 \
+    JAVA_UPDATE=151 \
+    JAVA_BUILD=12 \
     JAVA_HOME="/usr/lib/jvm/default-jvm" \
     LANG=C.UTF-8 \
     GLIBC_VERSION=2.25-r0 \
-    ORACLE_AUTHORIZATION_KEY=090f390dda5b47b9b721c7dfaa008135
+    ORACLE_AUTHORIZATION_KEY=9c674b4863705a4180a6080a13df27c3
 
 RUN apk upgrade --update && \
     apk add --no-cache --virtual=build-dependencies libstdc++ curl ca-certificates unzip && \
