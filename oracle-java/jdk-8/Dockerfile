@@ -8,7 +8,7 @@ ENV JAVA_VERSION=8  \
     JAVA_HOME="/usr/lib/jvm/default-jvm" \
     LANG=C.UTF-8 \
     GLIBC_VERSION=2.25-r0 \
-    ORACLE_AUTHORIZATION_KEY=9c674b4863705a4180a6080a13df27c3
+    ORACLE_AUTHORIZATION_KEY=e758a0de34e24606bca991d704f6dcbf
 
 RUN apk upgrade --update && \
     apk add --no-cache --virtual=build-dependencies libstdc++ curl ca-certificates unzip && \
