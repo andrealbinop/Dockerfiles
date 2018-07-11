@@ -1,14 +1,15 @@
-FROM alpine:3.6
+FROM alpine:3.8
 
 MAINTAINER Luciano Mores <luciano.mores@gmail.com>
 
+#https://gist.github.com/P7h/9741922
 ENV JAVA_VERSION=8  \
-    JAVA_UPDATE=151 \
-    JAVA_BUILD=12 \
+    JAVA_UPDATE=171 \
+    JAVA_BUILD=11 \
     JAVA_HOME="/usr/lib/jvm/default-jvm" \
     LANG=C.UTF-8 \
-    GLIBC_VERSION=2.25-r0 \
-    ORACLE_AUTHORIZATION_KEY=e758a0de34e24606bca991d704f6dcbf
+    GLIBC_VERSION=2.27-r0 \ 
+    ORACLE_AUTHORIZATION_KEY=512cd62ec5174c3487ac17c61aaa89e8 
 
 RUN apk upgrade --update && \
     apk add --no-cache --virtual=build-dependencies libstdc++ curl ca-certificates unzip && \
