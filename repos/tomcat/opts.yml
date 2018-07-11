@@ -1,5 +1,5 @@
-tomcat_85_latest: &tomcat_85_latest 8.5.23
-tomcat_7_latest: &tomcat_7_latest 7.0.82
+tomcat_85_latest: &tomcat_85_latest 8.5.32
+tomcat_7_latest: &tomcat_7_latest 7.0.90
 
 tags:
   8.5-jdk8: 8.5
@@ -47,10 +47,10 @@ tomcat_signing_key:
     - F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
 
 apr_version:
-  all: 1.6.2
+  all: 1.6.3
 
 tomcat_native_version:
-  all: 1.2.14
+  all: 1.2.17
 
 catalina_home:
   all: "/usr/local/tomcat"
