@@ -1,8 +1,9 @@
 # Supported tags and respective `Dockerfile` links
 
-- [`8.5-jdk8`, `8.5`, `latest`, `8.5.23-jdk8` (*8.5-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8.5-jdk8/Dockerfile)
-- [`7-jdk7`, `7.0.82-jdk7` (*7-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk7/Dockerfile)
-- [`7-jdk8`, `7`, `7.0.82-jdk8` (*7-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk8/Dockerfile)
+- [`9`, `latest`, `9.0.10` (*9/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/9/Dockerfile)
+- [`8.5-jdk8`, `8.5`, `8.5.32-jdk8` (*8.5-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8.5-jdk8/Dockerfile)
+- [`7-jdk7`, `7.0.90-jdk7` (*7-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk7/Dockerfile)
+- [`7-jdk8`, `7`, `7.0.90-jdk8` (*7-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk8/Dockerfile)
 
 # What is Tomcat?
 

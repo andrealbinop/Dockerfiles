@@ -1,31 +1,37 @@
+tomcat_9_latest: &tomcat_9_latest 9.0.10
 tomcat_85_latest: &tomcat_85_latest 8.5.32
 tomcat_7_latest: &tomcat_7_latest 7.0.90
 
 tags:
+  9: 9
   8.5-jdk8: 8.5
   7-jdk7: 7
   7-jdk8: 7
 
 aliases:
-  latest: 8.5
+  latest: 9
+  9.0.10: 9
   8.5: 8.5-jdk8
-  8.5.23-jdk8: 8.5-jdk8
+  8.5.32-jdk8: 8.5-jdk8
   7: 7-jdk8
-  7.0.82-jdk8: 7-jdk8
-  7.0.82-jdk7: 7-jdk7
+  7.0.90-jdk8: 7-jdk8
+  7.0.90-jdk7: 7-jdk7
 
 tomcat_major_version:
   group:
+    9: 9
     8.5: 8
     7: 7
 
 tomcat_minor_version:
   group:
+    9: *tomcat_9_latest
     8.5: *tomcat_85_latest
     7: *tomcat_7_latest
 
 java_version:
   tag:
+    9: 8
     8.5-jdk8: 8
     7-jdk7: 7
     7-jdk8: 8
