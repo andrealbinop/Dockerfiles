@@ -1,12 +1,9 @@
 # Supported tags and respective `Dockerfile` links
 
-- [`8.5-jdk8`, `8.5`, `latest`, `8.5.23-jdk8` (*8.5-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8.5-jdk8/Dockerfile)
-- [`8-jdk7`, `8.0.47-jdk7` (*8-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8-jdk7/Dockerfile)
-- [`8-jdk8`, `8`, `8.0.47-jdk8` (*8-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8-jdk8/Dockerfile)
-- [`7-jdk7`, `7.0.82-jdk7` (*7-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk7/Dockerfile)
-- [`7-jdk8`, `7`, `7.0.82-jdk8` (*7-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk8/Dockerfile)
-- [`6-jdk6`, `6.0.53-jdk6` (*6-jdk6/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6-jdk6/Dockerfile)
-- [`6-jdk7`, `6`, `6.0.53-jdk7` (*6-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/6-jdk7/Dockerfile)
+- [`9`, `latest`, `9.0.10` (*9/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/9/Dockerfile)
+- [`8.5-jdk8`, `8.5`, `8.5.32-jdk8` (*8.5-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/8.5-jdk8/Dockerfile)
+- [`7-jdk7`, `7.0.90-jdk7` (*7-jdk7/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk7/Dockerfile)
+- [`7-jdk8`, `7`, `7.0.90-jdk8` (*7-jdk8/Dockerfile*)](https://github.com/andreptb/Dockerfiles/blob/master/tomcat/7-jdk8/Dockerfile)
 
 # What is Tomcat?
 
@@ -21,16 +18,16 @@ Apache Tomcat (or simply Tomcat) is an open source web server and servlet contai
 Run the default Tomcat server (`CMD ["catalina.sh", "run"]`):
 
 ```console
-$ docker run -it --rm tomcat:8.0
+$ docker run -it --rm andreptb/tomcat
 ```
 
-You can test it by visiting `http://container-ip:8080` in a browser or, if you need access outside the host, on port 8888:
+You can test it by visiting `http://container-ip:8080` in a browser or, if you need access outside the host, on port 8080:
 
 ```console
-$ docker run -it --rm -p 8888:8080 tomcat:8.0
+$ docker run -it --rm -p 8080:8080 andreptb/tomcat
 ```
 
-You can then go to `http://localhost:8888` or `http://host-ip:8888` in a browser.
+You can then go to `http://localhost:8080` or `http://host-ip:8080` in a browser.
 
 The default Tomcat environment in the image for versions 7 and 8 is:
 

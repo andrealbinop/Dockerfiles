@@ -4,10 +4,10 @@ MAINTAINER Andre Albino Pereira <andreptb@gmail.com>
 ENV CATALINA_HOME="/usr/local/tomcat" \
     PATH="/usr/local/tomcat/bin:$PATH" \
     TOMCAT_MAJOR_VERSION=7 \
-    TOMCAT_MINOR_VERSION=7.0.82 \
+    TOMCAT_MINOR_VERSION=7.0.90 \
     APACHE_MIRROR="https://archive.apache.org/dist" \
-    APR_VERSION=1.6.2 \
-    TOMCAT_NATIVE_VERSION=1.2.14
+    APR_VERSION=1.6.3 \
+    TOMCAT_NATIVE_VERSION=1.2.17
 RUN mkdir -p "${CATALINA_HOME}"
 WORKDIR $CATALINA_HOME
 

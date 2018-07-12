@@ -1,13 +1,13 @@
-FROM andreptb/oracle-java:6
+FROM andreptb/oracle-java:8
 MAINTAINER Andre Albino Pereira <andreptb@gmail.com>
 
 ENV CATALINA_HOME="/usr/local/tomcat" \
     PATH="/usr/local/tomcat/bin:$PATH" \
-    TOMCAT_MAJOR_VERSION=6 \
-    TOMCAT_MINOR_VERSION=6.0.53 \
+    TOMCAT_MAJOR_VERSION=9 \
+    TOMCAT_MINOR_VERSION=9.0.10 \
     APACHE_MIRROR="https://archive.apache.org/dist" \
-    APR_VERSION=1.6.2 \
-    TOMCAT_NATIVE_VERSION=1.2.14
+    APR_VERSION=1.6.3 \
+    TOMCAT_NATIVE_VERSION=1.2.17
 RUN mkdir -p "${CATALINA_HOME}"
 WORKDIR $CATALINA_HOME
 
@@ -27,9 +27,6 @@ RUN set -x \
         DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 \
         F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE \
         F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23 \
-        B3F49CD3B9BD2996DA90F817ED3873F5D3262722 \
-        80FF76D88A969FE46108558A80B953A041E49465 \
-        8B39757B1D8A994DF2433ED58B3A601F08C975E5 \
   && update-ca-certificates \
   && wget -q --no-check-certificate "${APACHE_MIRROR}/tomcat/tomcat-${TOMCAT_MAJOR_VERSION}/v${TOMCAT_MINOR_VERSION}/bin/apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz" \
   && wget -q --no-check-certificate "${APACHE_MIRROR}/tomcat/tomcat-${TOMCAT_MAJOR_VERSION}/v${TOMCAT_MINOR_VERSION}/bin/apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz.asc" \
