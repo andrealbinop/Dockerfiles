@@ -4,16 +4,16 @@ MAINTAINER Luciano Mores <luciano.mores@gmail.com>
 
 #https://gist.github.com/P7h/9741922
 ENV JAVA_VERSION=8  \
-    JAVA_UPDATE=171 \
-    JAVA_BUILD=11 \
+    JAVA_UPDATE=181 \
+    JAVA_BUILD=13 \
     JAVA_HOME="/usr/lib/jvm/default-jvm" \
     LANG=C.UTF-8 \
-    GLIBC_VERSION=2.27-r0 \ 
-    ORACLE_AUTHORIZATION_KEY=512cd62ec5174c3487ac17c61aaa89e8 
+    GLIBC_VERSION=2.28-r0 \ 
+    ORACLE_AUTHORIZATION_KEY=96a7b8442fe848ef90c96a2fad6ed6d1 
 
 RUN apk upgrade --update && \
     apk add --no-cache --virtual=build-dependencies libstdc++ curl ca-certificates unzip && \
-    for pkg in glibc-${GLIBC_VERSION} glibc-bin-${GLIBC_VERSION} glibc-i18n-${GLIBC_VERSION}; do curl -sSL https://github.com/andyshinn/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/${pkg}.apk -o /tmp/${pkg}.apk; done && \
+    for pkg in glibc-${GLIBC_VERSION} glibc-bin-${GLIBC_VERSION} glibc-i18n-${GLIBC_VERSION}; do curl -sSL https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/${pkg}.apk -o /tmp/${pkg}.apk; done && \
     apk add --allow-untrusted /tmp/*.apk && \
     rm -v /tmp/*.apk && \
     ( /usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 C.UTF-8 || true ) && \
