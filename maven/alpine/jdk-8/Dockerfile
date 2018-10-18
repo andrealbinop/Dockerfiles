@@ -2,7 +2,7 @@ FROM andreptb/oracle-java:8-alpine
 
 MAINTAINER Luciano Mores <luciano.mores@gmail.com>
 
-ENV MAVEN_VERSION 3.3.9
+ENV MAVEN_VERSION 3.5.4
 ENV MAVEN_HOME /usr/lib/maven
 ENV PATH /usr/lib/maven/bin:$JAVA_HOME/bin:$PATH
 
