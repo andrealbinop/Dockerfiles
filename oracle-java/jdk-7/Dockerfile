@@ -22,8 +22,8 @@ RUN apk upgrade --update && \
         "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/UnlimitedJCEPolicyJDK${JAVA_VERSION}.zip \
         "http://download.oracle.com/otn-pub/java/jce/${JAVA_VERSION}/UnlimitedJCEPolicyJDK${JAVA_VERSION}.zip" && \
-    gunzip /tmp/java.tar.gz && \
-    tar -C /tmp -xf /tmp/java.tar && \
+    #gunzip /tmp/java.tar.gz && \
+    tar -C /tmp -zvxf /tmp/java.tar.gz && \
     mkdir -p "/usr/lib/jvm" && \
     mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
     ln -s "java-${JAVA_VERSION}-oracle" "$JAVA_HOME" && \
