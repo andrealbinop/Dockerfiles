@@ -66,4 +66,4 @@ RUN apk upgrade --update && \
     rm -rf /tmp/* /var/cache/apk/*
 
 # Define working directory.
-WORKDIR /data
+#WORKDIR /data
