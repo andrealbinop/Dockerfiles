@@ -10,7 +10,7 @@ ENV JAVA_VERSION=7  \
     GLIBC_VERSION=2.23-r3
 
 RUN apk upgrade --update && \
-    apk add --no-cache --virtual=build-dependencies libstdc++ curl ca-certificates unzip && \
+    apk add --no-cache --virtual=build-dependencies libstdc++ curl ca-certificates unzip gzip && \
     for pkg in glibc-${GLIBC_VERSION} glibc-bin-${GLIBC_VERSION} glibc-i18n-${GLIBC_VERSION}; do curl -sSL https://github.com/andyshinn/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/${pkg}.apk -o /tmp/${pkg}.apk; done && \
     apk add --allow-untrusted /tmp/*.apk && \
     rm -v /tmp/*.apk && \
