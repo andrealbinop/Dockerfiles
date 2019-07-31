@@ -49,7 +49,7 @@ The configuration files are available in `/usr/local/tomcat/conf/`. By default, 
 
 ## What are the differences between this image and [docker-library/tomcat](https://github.com/docker-library/tomcat)?
 
-* Uses andreptb/oracle-java](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java) instead of [docker-library/java](https://github.com/docker-library/java).
+* Uses [andreptb/oracle-java](https://github.com/andreptb/Dockerfiles/blob/master/oracle-java) instead of [docker-library/java](https://github.com/docker-library/java).
 * Provides base images with [Oracle JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) 6 (only tomcat 6), 7 and 8.
 * [Alpine](http://alpinelinux.org) images with [APR](https://apr.apache.org/) support. Check below for more information.
 
